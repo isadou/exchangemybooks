@@ -1,4 +1,5 @@
 class BookController < ApplicationController
+  before_action :set_book, only: [:show, :edit, :update, :destroy]
 
   def index
     @books = Book.all
@@ -11,7 +12,7 @@ class BookController < ApplicationController
   def create
     @book = Book.new
     if @book.save
-      redirect_to books_path(@book)
+      redirect_to books_path
     else
       render :new
     end
