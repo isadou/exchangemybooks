@@ -1,0 +1,10 @@
+div class="container">
+
+  <h2>
+    Welcome <span class="highlight-red"><%= current_user.first_name %></span>  <%= current_user.last_name%> 👋🏻
+  </h2>
+  <p class="form-paragraph">You have a new book for our shared librairy ... </p>
+  <%= render 'form' %>
+
+  <%= link_to 'Back', books_path %>
+</div>

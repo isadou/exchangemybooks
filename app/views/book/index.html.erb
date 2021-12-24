@@ -1,0 +1,23 @@
+ <h2> Discover all our <span class= "highlight-red"> Shared Librairy !</span></h2>
+<div class="main-container d-flex">
+
+  <div class="cards-books-list">
+    <% if @books == []  %>
+    <h4>Sorry no books ...</h4>
+    <%= link_to 'Back',  books_path %>
+    <% end %>
+    <% @books.each do |book| %>
+      <p><strong><%= book.title %></strong></p>
+      <p><strong><%= book.author %></strong></p>
+      <p><strong><%= book.resume %></strong></p>
+      <p> <%= book.year %></p>
+      </div>
+      <div class="cards-price-book d-flex align-self-center">
+        <p><strong><%= teacher.price.floor %> €</strong></p>
+      </div>
+      <div>
+        <%= link_to 'Back!',  books_path %>
+      </div>
+    <% end %>
+  </div>
+</div>
